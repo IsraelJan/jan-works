@@ -1,0 +1,541 @@
+.section {
+  width: 100%;
+
+  padding-top: 15px;
+  padding-bottom: 5rem;
+
+  background: var(--color-white);
+}
+
+.container {
+  width: min(
+    100% - (var(--container-padding) * 2),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+/* =========================================
+   HEADER
+   NOT INSIDE THE ROUNDED CONTAINER
+========================================= */
+
+.header {
+  padding: 1.25rem 0 1.75rem;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 0.65rem;
+
+  margin-bottom: 1.25rem;
+
+  color: var(--color-grey-500);
+
+  font-size: 0.6rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 25px;
+  height: 2px;
+
+  background: #93c5fd;
+}
+
+.headerContent {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
+
+  align-items: end;
+
+  gap: 4rem;
+}
+
+.heading {
+  max-width: 720px;
+
+  color: var(--color-black);
+
+  font-size: clamp(
+    1.65rem,
+    2.65vw,
+    2.65rem
+  );
+
+  font-weight: 600;
+
+  letter-spacing: -0.045em;
+
+  line-height: 0.98;
+}
+
+.heading span {
+  display: block;
+
+  color: #93c5fd;
+}
+
+.introduction {
+  max-width: 390px;
+
+  color: var(--color-grey-500);
+
+  font-size: 0.75rem;
+
+  line-height: 1.55;
+}
+
+/* =========================================
+   THREE MAJOR PARTS
+   THIS IS THE ONLY ROUNDED CONTAINER
+========================================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border-light);
+
+  border-radius: 15px;
+
+  background: var(--color-white);
+}
+
+/* =========================================
+   CAPABILITY COLUMN
+========================================= */
+
+.capability {
+  display: grid;
+
+  grid-template-columns:
+    minmax(125px, 0.72fr)
+    minmax(145px, 1fr);
+
+  min-width: 0;
+
+  min-height: 285px;
+
+  padding: 1.5rem;
+
+  border-right: 1px solid var(--border-light);
+}
+
+.capability:first-child {
+  padding-left: 1.75rem;
+}
+
+.capability:last-child {
+  border-right: 0;
+
+  padding-right: 1.75rem;
+}
+
+/* =========================================
+   CATEGORY IDENTITY
+========================================= */
+
+.identity {
+  min-width: 0;
+
+  padding-right: 1.25rem;
+}
+
+.identityTop {
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  margin-bottom: 1rem;
+}
+
+.number {
+  color: var(--color-grey-500);
+
+  font-size: 0.62rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+
+  fill: none;
+
+  stroke: #93c5fd;
+
+  stroke-width: 1.45;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.identity h3 {
+  margin-bottom: 0.45rem;
+
+  color: var(--color-black);
+
+  font-size: 1.15rem;
+
+  font-weight: 600;
+
+  letter-spacing: -0.025em;
+
+  line-height: 1;
+}
+
+.identity p {
+  max-width: 150px;
+
+  color: var(--color-grey-500);
+
+  font-size: 0.67rem;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  min-width: 0;
+
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+
+  list-style: none;
+
+  border-left: 1px solid var(--border-light);
+}
+
+.service {
+  display: flex;
+  align-items: center;
+
+  min-height: 34px;
+
+  gap: 0.55rem;
+
+  color: var(--color-grey-500);
+
+  font-size: 0.61rem;
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+
+  line-height: 1.3;
+
+  text-align: left;
+
+  /*
+    Keeps every service beginning
+    from exactly the same left position.
+  */
+  justify-content: flex-start;
+}
+
+.bullet {
+  display: inline-flex;
+
+  width: 9px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #93c5fd;
+
+  font-size: 0.85rem;
+
+  line-height: 1;
+}
+
+.service:hover {
+  color: var(--color-black);
+}
+
+/* =========================================
+   ONE APPROACH
+   OUTSIDE THE ROUNDED CONTAINER
+========================================= */
+
+.approach {
+  display: grid;
+
+  grid-template-columns: 180px 1fr 30px;
+
+  align-items: center;
+
+  gap: 2rem;
+
+  padding: 1.35rem 0 0;
+}
+
+.approachLabel {
+  display: flex;
+  align-items: center;
+
+  gap: 0.65rem;
+
+  color: var(--color-grey-400);
+
+  font-size: 0.6rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.approachLine {
+  width: 20px;
+  height: 1px;
+
+  background: #93c5fd;
+}
+
+.approachText {
+  margin: 0;
+
+  color: var(--color-grey-500);
+
+  font-size: 0.72rem;
+
+  line-height: 1.5;
+
+  /*
+    Keep the sentence anchored
+    cleanly to the left.
+  */
+  text-align: left;
+}
+
+.approachArrow {
+  color: #93c5fd;
+
+  font-size: 1rem;
+
+  text-align: right;
+}
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1200px) {
+  .header {
+    padding-bottom: 2rem;
+  }
+
+  .capability {
+    min-height: 295px;
+
+    padding-top: 1.65rem;
+    padding-bottom: 1.65rem;
+  }
+
+  .service {
+    min-height: 31px;
+
+    font-size: 0.63rem;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .headerContent {
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 2.5rem;
+  }
+
+  .capability {
+    grid-template-columns: 1fr;
+
+    min-height: 300px;
+  }
+
+  .identity {
+    padding-right: 0;
+  }
+
+  .identity p {
+    max-width: 190px;
+  }
+
+  .services {
+    margin-top: 1.5rem;
+
+    padding-top: 1rem;
+    padding-left: 0;
+
+    border-top: 1px solid var(--border-light);
+    border-left: 0;
+  }
+
+  .service {
+    min-height: 30px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .section {
+    padding-top: 15px;
+    padding-bottom: 4rem;
+  }
+
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .headerContent {
+    grid-template-columns: 1fr;
+
+    gap: 1.25rem;
+  }
+
+  .heading {
+    font-size: clamp(
+      1.55rem,
+      7vw,
+      2.2rem
+    );
+  }
+
+  .introduction {
+    max-width: 100%;
+
+    font-size: 0.72rem;
+  }
+
+  /* Keep the rounded container */
+  .grid {
+    grid-template-columns: 1fr;
+
+    border-radius: 15px;
+  }
+
+  .capability,
+  .capability:first-child,
+  .capability:last-child {
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 0;
+
+    padding: 1.5rem 1.25rem;
+
+    border-right: 0;
+
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .capability:last-child {
+    border-bottom: 0;
+  }
+
+  .identity {
+    padding-right: 1rem;
+  }
+
+  .identity h3 {
+    font-size: 1.05rem;
+  }
+
+  .identity p {
+    font-size: 0.64rem;
+  }
+
+  .services {
+    margin-top: 0;
+
+    padding-top: 0;
+    padding-left: 1rem;
+
+    border-top: 0;
+    border-left: 1px solid var(--border-light);
+  }
+
+  .service {
+    min-height: 30px;
+
+    font-size: 0.58rem;
+  }
+
+  .approach {
+    grid-template-columns: 1fr;
+
+    gap: 0.65rem;
+
+    padding-top: 1.25rem;
+  }
+
+  .approachArrow {
+    text-align: left;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+  .capability,
+  .capability:first-child,
+  .capability:last-child {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+
+  .identity h3 {
+    font-size: 0.98rem;
+  }
+
+  .identity p {
+    font-size: 0.61rem;
+  }
+
+  .service {
+    font-size: 0.55rem;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .service {
+    transition: none;
+  }
+}

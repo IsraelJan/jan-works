@@ -1,0 +1,1108 @@
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #080a0d;
+  color: #ffffff;
+
+  user-select: none;
+  touch-action: none;
+
+  animation: introIn 900ms
+    cubic-bezier(0.76, 0, 0.24, 1)
+    both;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 76% 48%,
+      rgba(147, 197, 253, 0.10),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 25% 70%,
+      rgba(125, 211, 252, 0.045),
+      transparent 28%
+    ),
+    #080a0d;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.12;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 30%,
+    black 70%,
+    transparent
+  );
+}
+
+.glow {
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: 4%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  background: rgba(125, 211, 252, 0.035);
+
+  filter: blur(70px);
+}
+
+
+/* ==========================================================
+   TOP
+========================================================== */
+
+.top {
+  position: relative;
+  z-index: 5;
+
+  width: min(
+    100% - (var(--container-padding) * 2),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+
+  padding-top: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.46);
+
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  animation: topIn 1000ms
+    150ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.identityName {
+  color: #ffffff;
+}
+
+.identityDivider {
+  color: #60a5fa;
+}
+
+.year {
+  color: rgba(255, 255, 255, 0.32);
+}
+
+
+/* ==========================================================
+   MAIN
+========================================================== */
+
+.main {
+  position: relative;
+  z-index: 3;
+
+  width: min(
+    100% - (var(--container-padding) * 2),
+    1280px
+  );
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(380px, 0.78fr);
+
+  align-items: center;
+
+  gap: clamp(4rem, 7vw, 9rem);
+}
+
+
+/* ==========================================================
+   LEFT CONTENT
+========================================================== */
+
+.copy {
+  max-width: 690px;
+
+  animation: copyIn 1200ms
+    300ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 30px;
+
+  color: rgba(255, 255, 255, 0.46);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 28px;
+  height: 1px;
+
+  background: #93c5fd;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+
+  color: #ffffff;
+
+  font-size: clamp(
+    4rem,
+    7vw,
+    7.5rem
+  );
+
+  font-weight: 600;
+
+  letter-spacing: -0.065em;
+
+  line-height: 0.84;
+
+  text-transform: uppercase;
+}
+
+.headline span {
+  display: block;
+
+  animation: headlineIn 1100ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.headline span:nth-child(1) {
+  animation-delay: 450ms;
+}
+
+.headline span:nth-child(2) {
+  animation-delay: 550ms;
+}
+
+.headline span:nth-child(3) {
+  animation-delay: 650ms;
+}
+
+.accentLine {
+  color: #93c5fd;
+}
+
+.description {
+  max-width: 510px;
+
+  margin-top: 36px;
+}
+
+.description p {
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+}
+
+.capabilities {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px 22px;
+
+  margin-top: 36px;
+
+  max-width: 640px;
+}
+
+.capabilities span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.capabilities i {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #93c5fd;
+}
+
+
+/* ==========================================================
+   RIGHT VISUAL
+========================================================== */
+
+.visual {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  animation: visualIn 1400ms
+    250ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.visualFrame {
+  position: relative;
+
+  width: min(100%, 470px);
+
+  aspect-ratio: 0.79;
+
+  animation: portraitFloat 10s
+    ease-in-out
+    infinite alternate;
+}
+
+.portrait {
+  position: absolute;
+
+  inset: 20px 20px 20px 0;
+
+  overflow: hidden;
+
+  background: #14171b;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  z-index: 2;
+}
+
+.image {
+  object-fit: cover;
+
+  object-position: center;
+
+  filter:
+    grayscale(100%)
+    contrast(1.08)
+    brightness(0.84);
+
+  transform: scale(1.04);
+
+  animation: imageMovement 10s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    infinite alternate;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(147, 197, 253, 0.08),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(0, 0, 0, 0.42)
+    );
+}
+
+
+/* ==========================================================
+   BLUE FRAME
+========================================================== */
+
+.blueFrame {
+  position: absolute;
+
+  inset: 0 0 0 20px;
+
+  border: 1px solid rgba(147, 197, 253, 0.38);
+
+  transform: translate(
+    14px,
+    14px
+  );
+
+  z-index: 1;
+
+  animation: frameMovement 8s
+    ease-in-out
+    infinite alternate;
+}
+
+
+/* ==========================================================
+   DECORATIVE CORNERS
+========================================================== */
+
+.cornerTop,
+.cornerBottom {
+  position: absolute;
+
+  width: 54px;
+  height: 54px;
+
+  z-index: 4;
+
+  pointer-events: none;
+}
+
+.cornerTop {
+  top: 5px;
+  right: -5px;
+
+  border-top: 1px solid #93c5fd;
+  border-right: 1px solid #93c5fd;
+}
+
+.cornerBottom {
+  bottom: 5px;
+  left: -5px;
+
+  border-bottom: 1px solid #93c5fd;
+  border-left: 1px solid #93c5fd;
+}
+
+
+/* ==========================================================
+   VISUAL LABEL
+========================================================== */
+
+.visualLabel {
+  position: absolute;
+
+  right: 30px;
+  bottom: 34px;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  text-align: right;
+
+  font-size: 0.55rem;
+  font-weight: 600;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+.visualLabel span:first-child {
+  color: #ffffff;
+}
+
+.visualLabel span:last-child {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+
+/* ==========================================================
+   VISUAL INDEX
+========================================================== */
+
+.visualNumber {
+  position: absolute;
+
+  top: -35px;
+  right: 5px;
+
+  color: rgba(255, 255, 255, 0.18);
+
+  font-size: 4rem;
+  font-weight: 600;
+
+  letter-spacing: -0.08em;
+
+  z-index: 1;
+}
+
+.verticalLabel {
+  position: absolute;
+
+  right: -54px;
+  top: 50%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  transform:
+    translateY(-50%)
+    rotate(90deg);
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 0.55rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  white-space: nowrap;
+}
+
+
+/* ==========================================================
+   BOTTOM
+========================================================== */
+
+.bottom {
+  position: relative;
+
+  z-index: 5;
+
+  width: min(
+    100% - (var(--container-padding) * 2),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+
+  padding-bottom: 30px;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 30px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 0.6rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  animation: bottomIn 1000ms
+    300ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.bottomLeft {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.bottomDivider {
+  width: 22px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* ==========================================================
+   ENTERING
+========================================================== */
+
+.entering {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  white-space: nowrap;
+}
+
+.enteringDot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #93c5fd;
+
+  box-shadow:
+    0 0 0 4px rgba(147, 197, 253, 0.08);
+
+  animation: enteringPulse 1.4s
+    ease-in-out
+    infinite;
+}
+
+.enteringDots {
+  display: inline-flex;
+
+  gap: 3px;
+}
+
+.enteringDots span {
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: #93c5fd;
+
+  opacity: 0.25;
+
+  animation: dots 1.2s
+    ease-in-out
+    infinite;
+}
+
+.enteringDots span:nth-child(2) {
+  animation-delay: 160ms;
+}
+
+.enteringDots span:nth-child(3) {
+  animation-delay: 320ms;
+}
+
+
+/* ==========================================================
+   ENTER BUTTON
+========================================================== */
+
+.enterButton {
+  justify-self: end;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 15px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 0.6rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    gap 180ms ease;
+}
+
+.enterButton:hover {
+  color: #ffffff;
+
+  gap: 20px;
+}
+
+.arrow {
+  color: #93c5fd;
+
+  font-size: 1rem;
+}
+
+
+/* ==========================================================
+   ACCENT BAR
+========================================================== */
+
+.accentBar {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(147, 197, 253, 0.15) 15%,
+    #93c5fd 50%,
+    rgba(147, 197, 253, 0.15) 85%,
+    transparent 100%
+  );
+
+  opacity: 0.8;
+}
+
+
+/* ==========================================================
+   PAUSED
+========================================================== */
+
+.paused .image,
+.paused .visualFrame,
+.paused .enteringDot,
+.paused .enteringDots span {
+  animation-play-state: paused;
+}
+
+
+/* ==========================================================
+   EXIT
+========================================================== */
+
+.leaving {
+  pointer-events: none;
+
+  animation:
+    introOut 1000ms
+    cubic-bezier(0.76, 0, 0.24, 1)
+    both;
+}
+
+.leaving .copy {
+  animation:
+    copyOut 650ms
+    cubic-bezier(0.76, 0, 0.24, 1)
+    both;
+}
+
+.leaving .visual {
+  animation:
+    visualOut 800ms
+    cubic-bezier(0.76, 0, 0.24, 1)
+    both;
+}
+
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes introIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes topIn {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes copyIn {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes headlineIn {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes visualIn {
+  from {
+    opacity: 0;
+    transform:
+      translateX(35px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateX(0)
+      scale(1);
+  }
+}
+
+@keyframes imageMovement {
+  from {
+    transform:
+      scale(1.04)
+      translate3d(1%, 0, 0);
+  }
+
+  to {
+    transform:
+      scale(1.09)
+      translate3d(-1%, -1%, 0);
+  }
+}
+
+@keyframes portraitFloat {
+  from {
+    transform: translateY(-3px);
+  }
+
+  to {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes frameMovement {
+  from {
+    transform:
+      translate(14px, 14px);
+  }
+
+  to {
+    transform:
+      translate(19px, 9px);
+  }
+}
+
+@keyframes bottomIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes enteringPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes dots {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes introOut {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+@keyframes copyOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes visualOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1000px) {
+  .main {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(300px, 0.7fr);
+
+    gap: 4rem;
+  }
+
+  .headline {
+    font-size: clamp(
+      3.5rem,
+      7vw,
+      6rem
+    );
+  }
+
+  .visual {
+    padding-right: 20px;
+  }
+
+  .verticalLabel {
+    display: none;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 720px) {
+  .top {
+    padding-top: 22px;
+  }
+
+  .identity {
+    gap: 8px;
+  }
+
+  .identity > span:last-child {
+    display: none;
+  }
+
+  .main {
+    width: min(
+      100% - (var(--container-padding) * 2),
+      520px
+    );
+
+    grid-template-columns: 1fr;
+
+    gap: 2.5rem;
+
+    align-content: center;
+
+    padding-block: 2rem;
+  }
+
+  .copy {
+    order: 2;
+
+    text-align: center;
+  }
+
+  .visual {
+    order: 1;
+
+    width: min(
+      75vw,
+      300px
+    );
+
+    margin-inline: auto;
+  }
+
+  .visualNumber {
+    top: -24px;
+    right: -8px;
+
+    font-size: 3rem;
+  }
+
+  .eyebrow {
+    justify-content: center;
+
+    margin-bottom: 20px;
+  }
+
+  .headline {
+    font-size: clamp(
+      3rem,
+      12vw,
+      4.5rem
+    );
+
+    line-height: 0.87;
+  }
+
+  .description {
+    margin-top: 24px;
+  }
+
+  .description p {
+    font-size: 0.78rem;
+  }
+
+  .capabilities {
+    justify-content: center;
+
+    gap: 8px 16px;
+
+    margin-top: 24px;
+  }
+
+  .capabilities span {
+    font-size: 0.5rem;
+  }
+
+  .bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 22px;
+  }
+
+  .bottomLeft {
+    display: none;
+  }
+
+  .entering {
+    font-size: 0.52rem;
+  }
+
+  .enterButton {
+    font-size: 0.52rem;
+  }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 430px) {
+  .visual {
+    width: min(
+      68vw,
+      250px
+    );
+  }
+
+  .main {
+    gap: 2rem;
+  }
+
+  .description {
+    max-width: 300px;
+
+    margin-inline: auto;
+  }
+
+  .capabilities span:nth-child(n + 4) {
+    display: none;
+  }
+
+  .entering {
+    display: none;
+  }
+
+  .bottom {
+    justify-content: flex-end;
+  }
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .intro *,
+  .intro {
+    animation: none !important;
+  }
+}

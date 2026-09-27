@@ -1,0 +1,261 @@
+.section {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #ffffff;
+  color: #111111;
+  overflow: hidden;
+}
+
+.container {
+  width: min(
+    100% - (var(--container-padding) * 2),
+    var(--container-width)
+  );
+  margin-inline: auto;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+
+  padding-bottom: 2.5rem;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  color: #73777d;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.line {
+  width: 24px;
+  height: 1px;
+  background: #93c5fd;
+}
+
+.introduction {
+  max-width: 360px;
+
+  color: #73777d;
+  font-size: 0.7rem;
+  line-height: 1.65;
+}
+
+/* MARQUEE */
+
+.marqueeArea {
+  width: 100%;
+
+  border-top: 1px solid #e1e4e7;
+  border-bottom: 1px solid #e1e4e7;
+}
+
+.marquee {
+  position: relative;
+
+  width: 100%;
+  overflow: hidden;
+
+  padding: 1.25rem 0;
+
+  border-bottom: 1px solid #eef0f2;
+}
+
+.marquee:last-child {
+  border-bottom: none;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+
+  animation: marquee 42s linear infinite;
+}
+
+.reverse .track {
+  animation-name: marqueeReverse;
+  animation-duration: 48s;
+}
+
+.tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin-right: 3.5rem;
+
+  color: #555a60;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+
+  opacity: 0.62;
+
+  filter: grayscale(1);
+  transition:
+    opacity var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.logo img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.tool:hover .logo {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+/* MARQUEE MOTION */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeReverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem;
+
+  padding-top: 1.5rem;
+
+  color: #9a9fa5;
+
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.footerDot {
+  color: #93c5fd;
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    padding-bottom: 2rem;
+  }
+
+  .introduction {
+    max-width: 430px;
+  }
+
+  .tool {
+    margin-right: 2.75rem;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header {
+    padding-bottom: 1.75rem;
+  }
+
+  .introduction {
+    font-size: 0.68rem;
+  }
+
+  .marquee {
+    padding: 1rem 0;
+  }
+
+  .track {
+    animation-duration: 32s;
+  }
+
+  .reverse .track {
+    animation-duration: 36s;
+  }
+
+  .tool {
+    gap: 0.6rem;
+    margin-right: 2.25rem;
+
+    font-size: 0.62rem;
+  }
+
+  .logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    line-height: 1.5;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .track,
+  .reverse .track {
+    animation: none;
+    transform: translateX(0);
+  }
+}

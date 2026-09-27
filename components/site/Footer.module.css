@@ -1,0 +1,272 @@
+.footer {
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 1.5rem;
+  background: #080a0d;
+  color: #ffffff;
+  border-top: 1px solid #1d2126;
+}
+
+.container {
+  width: min(
+    100% - (var(--container-padding) * 2),
+    var(--container-width)
+  );
+  margin-inline: auto;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.65fr;
+  align-items: start;
+  gap: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #93c5fd;
+}
+
+.brand p {
+  margin-top: 0.75rem;
+  color: #5f656c;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   STATEMENT
+========================================================= */
+
+.statement {
+  max-width: 300px;
+}
+
+.statementLabel {
+  display: block;
+  margin-bottom: 0.85rem;
+  color: #555b62;
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.statement p {
+  margin: 0;
+  color: #a0a5aa;
+  font-size: 0.7rem;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.25rem;
+  border-top: 1px solid #25292e;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 42px;
+
+  color: #777d84;
+  border-bottom: 1px solid #25292e;
+
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    color 180ms ease,
+    padding 180ms ease;
+}
+
+.navLink span:last-child {
+  color: #93c5fd;
+  opacity: 0.45;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.navLink:hover {
+  padding-left: 0.25rem;
+  color: #ffffff;
+}
+
+.navLink:hover span:last-child {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   CONTACT STRIP
+========================================================= */
+
+.contactStrip {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 2rem;
+
+  padding-top: 1.25rem;
+
+  border-top: 1px solid #25292e;
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  color: #555b62;
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.statusDot {
+  width: 5px;
+  height: 5px;
+  background: #93c5fd;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.08);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.socials a {
+  color: #686e75;
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.socials a:hover {
+  color: #ffffff;
+}
+
+.year {
+  color: #454b51;
+  font-size: 0.48rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .navigation {
+    grid-column: 2;
+  }
+
+  .contactStrip {
+    grid-template-columns: 1fr auto;
+  }
+
+  .year {
+    justify-self: end;
+  }
+
+  .socials {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .footer {
+    padding-top: 3rem;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .statement {
+    max-width: 360px;
+  }
+
+  .navigation {
+    grid-column: auto;
+    max-width: 360px;
+  }
+
+  .contactStrip {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .socials {
+    grid-column: auto;
+    grid-row: auto;
+    gap: 1rem;
+  }
+
+  .year {
+    justify-self: start;
+  }
+}
