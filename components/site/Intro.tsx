@@ -4,17 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import styles from "./Intro.module.css";
 
-const INTRO_DURATION = 10000;
+const INTRO_DURATION = 9000;
 const EXIT_DURATION = 1000;
 
 export default function Intro() {
   const [visible, setVisible] = useState(true);
   const [leaving, setLeaving] = useState(false);
-  const [paused, setPaused] = useState(false);
 
-  const elapsedRef = useRef(0);
-  const lastTimeRef = useRef<number | null>(null);
-  const animationFrameRef = useRef<number | null>(null);
+  const exitTimerRef = useRef<number | null>(null);
+  const hasExitedRef = useRef(false);
 
   useEffect(() => {
     const seen = sessionStorage.getItem(
@@ -28,44 +26,25 @@ export default function Intro() {
 
     document.body.style.overflow = "hidden";
 
-    const tick = (time: number) => {
-      if (lastTimeRef.current === null) {
-        lastTimeRef.current = time;
-      }
-
-      if (!paused) {
-        const delta = time - lastTimeRef.current;
-
-        elapsedRef.current += delta;
-
-        if (elapsedRef.current >= INTRO_DURATION) {
-          exitIntro();
-          return;
-        }
-      }
-
-      lastTimeRef.current = time;
-
-      animationFrameRef.current =
-        window.requestAnimationFrame(tick);
-    };
-
-    animationFrameRef.current =
-      window.requestAnimationFrame(tick);
+    const introTimer = window.setTimeout(() => {
+      exitIntro();
+    }, INTRO_DURATION);
 
     return () => {
-      document.body.style.overflow = "";
+      window.clearTimeout(introTimer);
 
-      if (animationFrameRef.current) {
-        window.cancelAnimationFrame(
-          animationFrameRef.current
-        );
+      if (exitTimerRef.current !== null) {
+        window.clearTimeout(exitTimerRef.current);
       }
+
+      document.body.style.overflow = "";
     };
-  }, [paused]);
+  }, []);
 
   function exitIntro() {
-    if (leaving) return;
+    if (hasExitedRef.current) return;
+
+    hasExitedRef.current = true;
 
     sessionStorage.setItem(
       "israel-jan-portfolio-intro-seen",
@@ -74,19 +53,10 @@ export default function Intro() {
 
     setLeaving(true);
 
-    window.setTimeout(() => {
+    exitTimerRef.current = window.setTimeout(() => {
       setVisible(false);
       document.body.style.overflow = "";
     }, EXIT_DURATION);
-  }
-
-  function handlePointerDown() {
-    setPaused(true);
-  }
-
-  function handlePointerUp() {
-    setPaused(false);
-    lastTimeRef.current = performance.now();
   }
 
   if (!visible) return null;
@@ -95,13 +65,9 @@ export default function Intro() {
     <section
       className={`${styles.intro} ${
         leaving ? styles.leaving : ""
-      } ${paused ? styles.paused : ""}`}
+      }`}
       role="dialog"
       aria-label="Israel Jan Portfolio introduction"
-      onPointerDown={handlePointerDown}
-      onPointerUp={handlePointerUp}
-      onPointerCancel={handlePointerUp}
-      onPointerLeave={handlePointerUp}
     >
       {/* BACKGROUND */}
 
@@ -275,10 +241,7 @@ export default function Intro() {
 
         <button
           type="button"
-          onClick={(event) => {
-            event.stopPropagation();
-            exitIntro();
-          }}
+          onClick={exitIntro}
           className={styles.enterButton}
         >
           <span>

@@ -1,0 +1,586 @@
+.section {
+  background: #ffffff;
+  padding: 20px 0 120px;
+}
+
+.container {
+  width: min(1280px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+  padding-bottom: 72px;
+}
+
+.headerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #dfe3e8;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  color: #111827;
+}
+
+.eyebrowLine {
+  width: 34px;
+  height: 1px;
+  background: #9fc4ed;
+}
+
+.headerMeta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #737b86;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  position: relative;
+  height: min(44vw, 560px);
+  min-height: 460px;
+
+  margin-top: 0;
+
+  overflow: hidden;
+
+  background: #eef1f3;
+}
+
+/*
+  The ARCLINE visual fills the entire hero.
+  The text sits over the left side.
+*/
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImageAsset {
+  object-fit: cover;
+  object-position: center right;
+
+  filter: saturate(0.82);
+
+  transition:
+    transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 500ms ease;
+}
+
+.hero:hover .heroImageAsset {
+  transform: scale(1.015);
+  filter: saturate(0.9);
+}
+
+/*
+  Creates the soft white editorial area
+  on the left while allowing the image
+  to remain visible on the right.
+*/
+
+.heroFade {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.96) 24%,
+      rgba(255, 255, 255, 0.78) 42%,
+      rgba(255, 255, 255, 0.22) 62%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+
+  pointer-events: none;
+}
+
+.heroContent {
+  position: absolute;
+  z-index: 2;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 47%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 48px 0 48px;
+}
+
+.heroEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 34px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  color: #59616c;
+}
+
+.heroEyebrow::before {
+  content: "";
+
+  width: 34px;
+  height: 1px;
+
+  background: #111827;
+}
+
+.heading {
+  margin: 0;
+
+  font-size: clamp(58px, 6.3vw, 96px);
+  line-height: 0.88;
+
+  letter-spacing: -0.065em;
+
+  font-weight: 700;
+
+  color: #080a0d;
+}
+
+.heading span {
+  display: block;
+  color: #9fc4ed;
+}
+
+.heroDescription {
+  max-width: 365px;
+
+  margin: 28px 0 0;
+
+  font-size: 13px;
+  line-height: 1.65;
+
+  color: #68717d;
+}
+
+.heroMeta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 28px;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+
+  color: #606a76;
+}
+
+.metaDivider {
+  width: 1px;
+  height: 12px;
+
+  background: #c8ced5;
+}
+
+.heroLabel {
+  position: absolute;
+
+  z-index: 3;
+
+  right: 24px;
+  bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+
+  color: #ffffff;
+
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* ================================
+   PROJECT ARCHIVE
+================================ */
+
+.workList {
+  border-top: 1px solid #dfe3e8;
+}
+
+.project {
+  display: grid;
+
+  grid-template-columns:
+    58px
+    180px
+    minmax(0, 1fr)
+    110px;
+
+  gap: 28px;
+
+  align-items: center;
+
+  min-height: 72px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #dfe3e8;
+
+  transition:
+    background 180ms ease,
+    padding 180ms ease;
+}
+
+.project:hover {
+  background: #fafbfc;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.projectNumber {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+
+  color: #29313b;
+}
+
+.projectCategory {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1.45;
+
+  letter-spacing: 0.16em;
+
+  color: #6693c7;
+}
+
+.projectMain {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.projectMain h2 {
+  flex: 0 0 340px;
+
+  margin: 0;
+
+  font-size: clamp(22px, 2vw, 30px);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  font-weight: 650;
+
+  color: #17202b;
+}
+
+.description {
+  max-width: 390px;
+
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  color: #727b86;
+}
+
+.projectLink {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  color: #17202b;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+.projectLink span:last-child {
+  font-size: 14px;
+  font-weight: 400;
+
+  color: #9fc4ed;
+}
+
+.projectLink:hover {
+  color: #5f86b3;
+}
+
+/* ================================
+   BOTTOM
+================================ */
+
+.bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding-top: 26px;
+}
+
+.bottomLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  color: #737b86;
+}
+
+.bottomLine {
+  width: 30px;
+  height: 1px;
+
+  background: #9fc4ed;
+}
+
+.bottomStatement {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1.6;
+
+  letter-spacing: 0.15em;
+
+  text-align: right;
+
+  color: #18212b;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+  .heroContent {
+    width: 58%;
+  }
+
+  .heroFade {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(255, 255, 255, 0.94) 32%,
+        rgba(255, 255, 255, 0.64) 54%,
+        rgba(255, 255, 255, 0.12) 80%,
+        rgba(255, 255, 255, 0) 100%
+      );
+  }
+
+  .project {
+    grid-template-columns:
+      48px
+      145px
+      minmax(0, 1fr)
+      100px;
+
+    gap: 20px;
+  }
+
+  .projectMain {
+    gap: 28px;
+  }
+
+  .projectMain h2 {
+    flex-basis: 250px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+  .section {
+    padding: 16px 0 80px;
+  }
+
+  .container {
+    width: min(100% - 40px, 1280px);
+  }
+
+  .headerMeta {
+    display: none;
+  }
+
+  .header {
+    padding-bottom: 56px;
+  }
+
+  .hero {
+    height: 620px;
+    min-height: 0;
+  }
+
+  .heroImageAsset {
+    object-position: 65% center;
+  }
+
+  .heroFade {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(255, 255, 255, 0.94) 30%,
+        rgba(255, 255, 255, 0.58) 52%,
+        rgba(255, 255, 255, 0.08) 78%,
+        rgba(255, 255, 255, 0.02) 100%
+      );
+  }
+
+  .heroContent {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    padding: 56px 0 32px;
+  }
+
+  .heroEyebrow {
+    margin-bottom: 26px;
+  }
+
+  .heading {
+    font-size: clamp(52px, 15vw, 78px);
+    line-height: 0.9;
+  }
+
+  .heroDescription {
+    max-width: 330px;
+
+    margin-top: 24px;
+
+    font-size: 12px;
+  }
+
+  .heroMeta {
+    margin-top: 22px;
+
+    font-size: 7px;
+  }
+
+  .heroLabel {
+    right: 16px;
+    bottom: 16px;
+
+    gap: 10px;
+
+    font-size: 7px;
+  }
+
+  .project {
+    grid-template-columns: 34px 1fr;
+
+    gap: 8px 16px;
+
+    padding: 24px 0;
+  }
+
+  .projectNumber {
+    grid-row: 1 / span 3;
+
+    font-size: 17px;
+  }
+
+  .projectCategory {
+    grid-column: 2;
+  }
+
+  .projectMain {
+    grid-column: 2;
+
+    display: block;
+  }
+
+  .projectMain h2 {
+    margin-bottom: 10px;
+
+    font-size: 27px;
+  }
+
+  .description {
+    max-width: 500px;
+
+    font-size: 11px;
+  }
+
+  .projectLink {
+    grid-column: 2;
+
+    justify-content: flex-start;
+
+    margin-top: 4px;
+  }
+
+  .bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .bottomStatement {
+    text-align: left;
+  }
+}

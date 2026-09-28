@@ -6,6 +6,7 @@ import ExperiencePreview from "@/components/home/ExperiencePreview";
 import Tools from "@/components/home/Tools";
 import AboutPreview from "@/components/home/AboutPreview";
 import Services from "@/components/home/Services";
+import Testimonials from "@/components/home/Testimonials";
 import ContactCTA from "@/components/home/ContactCTA";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Tools />
       <AboutPreview />
       <Services />
+      <Testimonials />
       <ContactCTA />
     </>
   );
