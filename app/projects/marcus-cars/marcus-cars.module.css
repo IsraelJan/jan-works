@@ -1,0 +1,1502 @@
+.page {
+  background: #ffffff;
+  color: #111111;
+}
+
+.container,
+.heroContainer,
+.ctaContainer {
+  width: min(1280px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SHARED
+========================================================= */
+
+.sectionTopline,
+.heroTopline,
+.ctaTopline,
+.nextProjectTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #dfe3e8;
+  color: #7c848d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.sectionEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #737b84;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.blueDot {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #9fc4ed;
+}
+
+.sectionHeading,
+.sectionHeadingDark,
+.prototypeHeader,
+.objectiveGrid,
+.toolsIntro {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 50px;
+  align-items: end;
+}
+
+.sectionHeading h2,
+.sectionHeadingDark h2,
+.prototypeHeader h2,
+.objectiveGrid h2,
+.toolsIntro h2 {
+  margin: 22px 0 0;
+  font-size: clamp(48px, 5.5vw, 82px);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.sectionHeading h2 span,
+.sectionHeadingDark h2 span,
+.prototypeHeader h2 span,
+.objectiveGrid h2 span,
+.toolsIntro h2 span {
+  color: #9fc4ed;
+}
+
+.sectionHeading > p,
+.sectionHeadingDark > p,
+.prototypeHeader > p,
+.toolsIntro > p {
+  color: #68717b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  padding: 20px 0 50px;
+  background: #ffffff;
+}
+
+.heroIntro {
+  max-width: 1050px;
+  padding: 85px 0 70px;
+}
+
+.heroEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #737b84;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.heroIntro h1 {
+  margin: 30px 0 0;
+  font-size: clamp(55px, 8.2vw, 85px);
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  font-weight: 700;
+}
+
+.heroIntro h1 span {
+  color: #9fc4ed;
+}
+
+.heroIntro > p {
+  max-width: 780px;
+  margin: 30px 0 0;
+  color: #5f6872;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.heroProductImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 8.5;
+  overflow: hidden;
+  background: #151719;
+  border: 1px solid #d7dce1;
+}
+
+.heroVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 11, 12, 0.02),
+    rgba(10, 11, 12, 0.3)
+  );
+  pointer-events: none;
+}
+
+.heroImageLabel {
+  position: absolute;
+  right: 25px;
+  bottom: 22px;
+  left: 25px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+
+.heroStory {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-right: 1px solid #dfe3e8;
+  border-left: 1px solid #dfe3e8;
+}
+
+.storyItem {
+  min-height: 190px;
+  padding: 28px;
+  border-right: 1px solid #dfe3e8;
+}
+
+.storyItem:last-child {
+  border-right: 0;
+}
+
+.storyItem span {
+  display: block;
+  margin-bottom: 45px;
+  color: #9fc4ed;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.storyItem p {
+  max-width: 340px;
+  margin: 0;
+  color: #626b74;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.heroMeta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 65px;
+  border-top: 1px solid #dfe3e8;
+  border-bottom: 1px solid #dfe3e8;
+}
+
+.heroMeta div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 20px;
+  border-right: 1px solid #dfe3e8;
+}
+
+.heroMeta div:last-child {
+  border-right: 0;
+}
+
+.heroMeta span {
+  color: #9299a1;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+
+.heroMeta strong {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.heroActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  min-width: 215px;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  transition: 180ms ease;
+}
+
+.primaryButton {
+  background: #111111;
+  color: #ffffff;
+}
+
+.secondaryButton {
+  border: 1px solid #cfd4da;
+  color: #111111;
+}
+
+.primaryButton:hover {
+  background: #9fc4ed;
+  color: #111111;
+}
+
+.secondaryButton:hover {
+  background: #f5f6f7;
+}
+
+/* =========================================================
+   OBJECTIVE
+========================================================= */
+
+.objectiveSection {
+  padding: 145px 0;
+  background: #f5f6f7;
+}
+
+.objectiveGrid {
+  margin-top: 75px;
+}
+
+.objectiveCopy {
+  color: #68717b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.objectiveCopy p {
+  max-width: 570px;
+  margin: 0 0 25px;
+}
+
+.objectiveFormula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 45px;
+  padding-top: 20px;
+  border-top: 1px solid #d8dde2;
+  color: #111111;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.objectiveFormula i {
+  color: #9fc4ed;
+  font-style: normal;
+}
+
+.objectiveFormula strong {
+  color: #9fc4ed;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 90px;
+  border-top: 1px solid #dfe3e8;
+  border-left: 1px solid #dfe3e8;
+}
+
+.productCard {
+  min-height: 300px;
+  padding: 28px;
+  border-right: 1px solid #dfe3e8;
+  border-bottom: 1px solid #dfe3e8;
+}
+
+.productCard > span {
+  color: #9fc4ed;
+  font-size: 10px;
+}
+
+.productCard h3 {
+  margin: 75px 0 18px;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.productCard p {
+  margin: 0;
+  color: #6f7780;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   USER JOURNEY
+========================================================= */
+
+.journeySection {
+  padding: 145px 0;
+  background: #111111;
+  color: #ffffff;
+}
+
+.journeySection .sectionTopline,
+.architectureSection .sectionTopline {
+  border-color: #30343a;
+}
+
+.sectionHeadingDark {
+  margin-top: 75px;
+}
+
+.sectionHeadingDark .sectionEyebrow {
+  color: #8b929a;
+}
+
+.sectionHeadingDark h2 span {
+  color: #9fc4ed;
+}
+
+.sectionHeadingDark > p {
+  color: #9da4ab;
+}
+
+.journeyFlow {
+  margin-top: 90px;
+  border-top: 1px solid #30343a;
+}
+
+.journeyStep {
+  display: grid;
+  grid-template-columns: 70px 1fr 40px;
+  align-items: center;
+  min-height: 78px;
+  border-bottom: 1px solid #30343a;
+}
+
+.journeyStep span {
+  color: #9fc4ed;
+  font-size: 10px;
+}
+
+.journeyStep strong {
+  font-size: 17px;
+  letter-spacing: -0.02em;
+}
+
+.journeyStep i {
+  color: #666d75;
+  font-style: normal;
+}
+
+/* =========================================================
+   VISUAL PROTOTYPE
+========================================================= */
+
+.prototypeSection {
+  padding: 80px 0;
+}
+
+.prototypeHeader {
+  margin-top: 75px;
+}
+
+.prototypeBoard {
+  display: grid;
+  grid-template-columns: 1.7fr 0.7fr;
+  gap: 16px;
+  margin-top: 90px;
+}
+
+.prototypeMain {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  background: #151719;
+  border: 1px solid #d8dde2;
+}
+
+.prototypeScreen {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 350ms ease,
+    visibility 350ms ease;
+}
+
+.prototypeScreen img {
+  object-fit: contain;
+  object-position: center;
+  padding: 20px;
+}
+
+.screenPrimary {
+  opacity: 1;
+  visibility: visible;
+}
+
+.prototypeBoard:has(.prototypeDiscovery:hover)
+  .screenPrimary,
+.prototypeBoard:has(.prototypeAuction:hover)
+  .screenPrimary,
+.prototypeBoard:has(.prototypeAccount:hover)
+  .screenPrimary {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.prototypeBoard:has(.prototypeDiscovery:hover)
+  .screenDiscovery {
+  opacity: 1;
+  visibility: visible;
+}
+
+.prototypeBoard:has(.prototypeAuction:hover)
+  .screenAuction {
+  opacity: 1;
+  visibility: visible;
+}
+
+.prototypeBoard:has(.prototypeAccount:hover)
+  .screenAccount {
+  opacity: 1;
+  visibility: visible;
+}
+
+.prototypeMainOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent 50%,
+    rgba(8, 9, 10, 0.52)
+  );
+}
+
+.prototypeLabel {
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+  left: 24px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.prototypeLabel span {
+  color: #9fc4ed;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+
+.prototypeLabel strong {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.prototypeSide {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #dfe3e8;
+}
+
+.prototypeConcept {
+  position: relative;
+  flex: 1;
+  padding: 28px;
+  border-bottom: 1px solid #dfe3e8;
+  cursor: pointer;
+  transition:
+    background 220ms ease,
+    padding-left 220ms ease;
+}
+
+.prototypeConcept:last-child {
+  border-bottom: 0;
+}
+
+.prototypeConcept span {
+  display: block;
+  color: #9fc4ed;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.prototypeConcept strong {
+  display: block;
+  margin: 45px 0 13px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.prototypeConcept p {
+  max-width: 280px;
+  margin: 0;
+  color: #737b84;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.prototypeConcept:hover {
+  padding-left: 34px;
+  background: #f5f6f7;
+}
+
+.prototypeConcept:hover strong {
+  color: #111111;
+}
+
+.prototypeConcept:hover p {
+  color: #59616a;
+}
+
+.prototypeConcept::after {
+  content: "↗";
+  position: absolute;
+  top: 27px;
+  right: 28px;
+  color: #c2c8ce;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.prototypeConcept:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.prototypePrimary {
+  background: #f5f6f7;
+}
+
+.prototypePrimary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #9fc4ed;
+}
+
+.prototypeCaption {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding-top: 22px;
+  border-bottom: 1px solid #dfe3e8;
+}
+
+.prototypeCaption > span {
+  color: #737b84;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.prototypeCaption p {
+  max-width: 500px;
+  margin: 0 0 22px;
+  color: #69727b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   AUCTION
+========================================================= */
+
+.auctionSection {
+  padding: 80px 0;
+  background: #f5f6f7;
+}
+
+.auctionGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.auctionCopy h2 {
+  margin: 25px 0 30px;
+  font-size: clamp(48px, 5vw, 76px);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
+.auctionCopy h2 span {
+  color: #9fc4ed;
+}
+
+.auctionCopy > p {
+  max-width: 520px;
+  color: #68717b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.auctionPoints {
+  margin-top: 50px;
+  border-top: 1px solid #d8dde2;
+}
+
+.auctionPoints div {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  padding: 16px 0;
+  border-bottom: 1px solid #d8dde2;
+}
+
+.auctionPoints span {
+  color: #9fc4ed;
+  font-size: 9px;
+}
+
+.auctionPoints p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.auctionVisual {
+  padding: 20px;
+  background: #111111;
+}
+
+.auctionVisualTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 3px 18px;
+  color: #808891;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.auctionVisualTop span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #ffffff;
+}
+
+.auctionVisualTop i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #9fc4ed;
+}
+
+.auctionImage {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #191b1e;
+}
+
+.auctionImage img {
+  object-fit: contain;
+  object-position: center;
+}
+
+/* =========================================================
+   TOOLS
+========================================================= */
+
+.toolsSection {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.toolsIntro {
+  margin-top: 75px;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 85px;
+  border-top: 1px solid #dfe3e8;
+  border-left: 1px solid #dfe3e8;
+}
+
+.toolCard {
+  position: relative;
+  min-height: 235px;
+  padding: 25px;
+  border-right: 1px solid #dfe3e8;
+  border-bottom: 1px solid #dfe3e8;
+  transition:
+    background 220ms ease,
+    transform 220ms ease;
+}
+
+.toolCard:hover {
+  background: #f5f6f7;
+}
+
+.toolNumber {
+  display: block;
+  color: #9fc4ed;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.toolIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-top: 48px;
+}
+
+.toolIcon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.toolCard h3 {
+  margin: 25px 0 0;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+/* =========================================================
+   WHAT I BUILT
+========================================================= */
+
+.builtSection {
+  padding: 85px 0;
+  background: #f5f6f7;
+}
+
+.builtGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 90px;
+  border-top: 1px solid #dfe3e8;
+  border-left: 1px solid #dfe3e8;
+}
+
+.builtItem {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 15px;
+  min-height: 95px;
+  padding: 25px;
+  border-right: 1px solid #dfe3e8;
+  border-bottom: 1px solid #dfe3e8;
+}
+
+.builtItem span {
+  color: #9fc4ed;
+  font-size: 9px;
+}
+
+.builtItem strong {
+  align-self: center;
+  font-size: 11px;
+  letter-spacing: 0.07em;
+}
+
+/* =========================================================
+   ARCHITECTURE
+========================================================= */
+
+.architectureSection {
+  padding: 80px 0;
+  background: #111111;
+  color: #ffffff;
+}
+
+.architectureSection .sectionEyebrow {
+  color: #8b929a;
+}
+
+.architectureDiagram {
+  max-width: 850px;
+  margin: 90px auto 0;
+}
+
+.architectureLayer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 30px;
+  min-height: 115px;
+  padding: 25px 28px;
+  background: #151719;
+  border: 1px solid #30343a;
+}
+
+.layerNumber {
+  color: #9fc4ed;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.architectureLayer h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+
+.architectureLayer p {
+  max-width: 650px;
+  margin: 0;
+  color: #858d96;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.layerConnector {
+  position: absolute;
+  left: 50%;
+  bottom: -21px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  transform: translateX(-50%);
+  background: #111111;
+  border: 1px solid #30343a;
+  color: #9fc4ed;
+}
+
+/* =========================================================
+   EVIDENCE
+========================================================= */
+
+.evidenceSection {
+  padding: 85px 0;
+}
+
+.evidenceContent {
+  max-width: 900px;
+  padding-top: 90px;
+}
+
+.evidenceContent h2 {
+  margin: 25px 0 30px;
+  font-size: clamp(60px, 8vw, 110px);
+  line-height: 0.84;
+  letter-spacing: -0.07em;
+}
+
+.evidenceContent h2 span {
+  color: #9fc4ed;
+}
+
+.evidenceContent > p {
+  max-width: 610px;
+  color: #68717b;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.evidenceActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 45px;
+}
+
+.evidencePrimary,
+.evidenceSecondary {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  min-width: 235px;
+  padding: 17px 20px;
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.evidencePrimary {
+  background: #111111;
+  color: #ffffff;
+}
+
+.evidenceSecondary {
+  border: 1px solid #cfd4da;
+  color: #111111;
+}
+
+.evidencePrimary:hover {
+  background: #9fc4ed;
+  color: #111111;
+}
+
+/* =========================================================
+   CURRENT STATE
+========================================================= */
+
+.currentSection {
+  padding: 145px 0;
+  background: #f5f6f7;
+}
+
+.currentGrid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 110px;
+}
+
+.currentGrid h2 {
+  margin: 22px 0 0;
+  font-size: clamp(48px, 5vw, 78px);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
+.currentGrid h2 span {
+  color: #9fc4ed;
+}
+
+.currentCopy {
+  max-width: 570px;
+}
+
+.currentCopy p {
+  margin: 0 0 25px;
+  color: #68717b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.currentStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px 13px;
+  border: 1px solid #d3d9df;
+  color: #656e78;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.ctaSection {
+  background: #111111;
+  color: #ffffff;
+}
+
+.ctaContainer {
+  padding: 24px 0 95px;
+}
+
+.ctaTopline {
+  border-color: #30343a;
+}
+
+.ctaContent {
+  padding: 100px 0 50px;
+}
+
+.ctaContent h2 {
+  margin: 25px 0 30px;
+  font-size: clamp(60px, 8vw, 115px);
+  line-height: 0.84;
+  letter-spacing: -0.07em;
+}
+
+.ctaContent h2 span {
+  color: #9fc4ed;
+}
+
+.ctaContent > p {
+  max-width: 660px;
+  color: #9ca3ab;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 45px;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: flex;
+  justify-content: space-between;
+  min-width: 245px;
+  padding: 17px 20px;
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.ctaPrimary {
+  background: #ffffff;
+  color: #111111;
+}
+
+.ctaSecondary {
+  border: 1px solid #454a50;
+  color: #ffffff;
+}
+
+.ctaPrimary:hover {
+  background: #9fc4ed;
+}
+
+.ctaLinks {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.ctaLinks a {
+  color: #7e868f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+}
+
+.ctaLinks a:hover {
+  color: #9fc4ed;
+}
+
+/* =========================================================
+   NEXT PROJECT
+========================================================= */
+
+.nextProject {
+  background: #ffffff;
+}
+
+.nextProjectTop {
+  width: min(1280px, calc(100% - 64px));
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.nextProjectLink {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  min-height: 650px;
+  color: #111111;
+  text-decoration: none;
+}
+
+.nextProjectImage {
+  position: relative;
+  overflow: hidden;
+  background: #f0f2f4;
+}
+
+.nextProjectImage img {
+  object-fit: contain;
+  object-position: center;
+  padding: 30px;
+  transition: transform 500ms ease;
+}
+
+.nextImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(10, 10, 10, 0.16)
+  );
+}
+
+.nextImageLabel {
+  position: absolute;
+  left: 25px;
+  bottom: 23px;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.nextProjectContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px;
+  border-left: 1px solid #dfe3e8;
+}
+
+.nextProjectContent > span {
+  color: #7b838d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.nextProjectContent h2 {
+  margin: 25px 0;
+  font-size: clamp(50px, 6vw, 90px);
+  line-height: 0.87;
+  letter-spacing: -0.065em;
+}
+
+.nextProjectContent h2 span {
+  color: #9fc4ed;
+}
+
+.nextProjectContent p {
+  max-width: 450px;
+  margin: 0;
+  color: #68717b;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.nextProjectArrow {
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px;
+  margin-top: 50px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #111111;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.nextProjectLink:hover .nextProjectImage img {
+  transform: scale(1.025);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .heroStory,
+  .heroMeta,
+  .productGrid,
+  .toolsGrid,
+  .builtGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sectionHeading,
+  .sectionHeadingDark,
+  .prototypeHeader,
+  .objectiveGrid,
+  .toolsIntro,
+  .currentGrid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .prototypeBoard,
+  .auctionGrid,
+  .nextProjectLink {
+    grid-template-columns: 1fr;
+  }
+
+  .prototypeMain {
+    min-height: 520px;
+  }
+
+  .prototypeSide {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prototypeConcept {
+    border-right: 1px solid #dfe3e8;
+  }
+
+  .prototypeConcept:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .nextProjectLink {
+    min-height: auto;
+  }
+
+  .nextProjectContent {
+    min-height: 500px;
+    border-top: 1px solid #dfe3e8;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .container,
+  .heroContainer,
+  .ctaContainer,
+  .nextProjectTop {
+    width: calc(100% - 36px);
+  }
+
+  .hero {
+    padding-bottom: 80px;
+  }
+
+  .heroTopline span:last-child,
+  .sectionTopline span:last-child,
+  .ctaTopline span:last-child,
+  .nextProjectTop span:last-child {
+    display: none;
+  }
+
+  .heroIntro {
+    padding: 60px 0 50px;
+  }
+
+  .heroIntro h1 {
+    font-size: clamp(55px, 15vw, 85px);
+  }
+
+  .heroIntro > p {
+    font-size: 15px;
+  }
+
+  .heroProductImage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .heroImageLabel {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    font-size: 7px;
+  }
+
+  .heroStory,
+  .heroMeta,
+  .productGrid,
+  .toolsGrid,
+  .builtGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .storyItem {
+    min-height: 170px;
+    border-right: 0;
+    border-bottom: 1px solid #dfe3e8;
+  }
+
+  .storyItem:last-child {
+    border-bottom: 0;
+  }
+
+  .heroMeta div {
+    border-right: 0;
+    border-bottom: 1px solid #dfe3e8;
+  }
+
+  .heroMeta div:last-child {
+    border-bottom: 0;
+  }
+
+  .heroActions,
+  .evidenceActions,
+  .ctaActions {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton,
+  .evidencePrimary,
+  .evidenceSecondary,
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+  }
+
+  .objectiveSection,
+  .journeySection,
+  .prototypeSection,
+  .auctionSection,
+  .toolsSection,
+  .builtSection,
+  .architectureSection,
+  .evidenceSection,
+  .currentSection {
+    padding: 90px 0;
+  }
+
+  .sectionHeading h2,
+  .sectionHeadingDark h2,
+  .prototypeHeader h2,
+  .objectiveGrid h2,
+  .toolsIntro h2,
+  .currentGrid h2 {
+    font-size: clamp(44px, 13vw, 68px);
+  }
+
+  .productGrid {
+    margin-top: 60px;
+  }
+
+  .productCard {
+    min-height: 240px;
+  }
+
+  .journeyFlow {
+    margin-top: 60px;
+  }
+
+  .journeyStep {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .journeyStep i {
+    display: none;
+  }
+
+  .prototypeBoard {
+    display: block;
+    margin-top: 60px;
+  }
+
+  .prototypeMain {
+    min-height: 320px;
+  }
+
+  .prototypeMain img {
+    padding: 10px;
+  }
+
+  .prototypeSide {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .prototypeConcept {
+    min-height: 170px;
+    border-right: 0;
+  }
+
+  .prototypeConcept:hover {
+    padding-left: 28px;
+  }
+
+  .prototypeCaption {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .auctionVisual {
+    padding: 10px;
+  }
+
+  .toolsGrid {
+    margin-top: 60px;
+  }
+
+  .toolCard {
+    min-height: 200px;
+  }
+
+  .structureTree {
+    padding: 35px 20px;
+    font-size: 11px;
+  }
+
+  .architectureDiagram {
+    margin-top: 60px;
+  }
+
+  .architectureLayer {
+    grid-template-columns: 45px 1fr;
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .evidenceContent {
+    padding-top: 60px;
+  }
+
+  .evidenceContent h2 {
+    font-size: clamp(55px, 15vw, 82px);
+  }
+
+  .ctaContent {
+    padding: 75px 0 40px;
+  }
+
+  .ctaContent h2 {
+    font-size: clamp(55px, 15vw, 85px);
+  }
+
+  .nextProjectLink {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nextProjectImage {
+    min-height: 320px;
+  }
+
+  .nextProjectContent {
+    min-height: 450px;
+    padding: 45px 22px;
+  }
+
+  .nextProjectContent h2 {
+    font-size: clamp(48px, 13vw, 72px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroVideo {
+    display: none;
+  }
+
+  .prototypeScreen,
+  .prototypeConcept,
+  .nextProjectImage img {
+    transition: none;
+  }
+}
