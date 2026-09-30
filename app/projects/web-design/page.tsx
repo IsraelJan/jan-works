@@ -509,7 +509,7 @@ export default function WebDesignPage() {
           style={{ scale: heroScale, y: heroY }}
         >
           <Image
-            src="/images/projects/websites/website-hero.jpg"
+            src="/images/projects/websites/hero.jpg"
             alt="ISRAEL JAN WORKS web design project"
             fill
             priority
@@ -545,7 +545,7 @@ export default function WebDesignPage() {
             <div className={styles.heroBottom}>
               <p>
                 I design and build digital experiences around how a business
-                actually works — from first impression to interaction,
+                actually works from first impression to interaction,
                 conversion and the systems behind it.
               </p>
 
@@ -871,7 +871,7 @@ export default function WebDesignPage() {
             <p>
               Different projects require different tools. I work across
               design, frontend development, CMS platforms, website builders
-              and business systems — choosing the right environment around
+              and business systems choosing the right environment around
               the project's needs.
             </p>
           </div>
