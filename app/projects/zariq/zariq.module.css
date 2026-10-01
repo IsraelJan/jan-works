@@ -1,0 +1,1849 @@
+.page {
+  --blue: #87ceeb;
+  --blue-light: #eaf8fd;
+  --blue-soft: #d8f1fa;
+  --blue-dark: #236d83;
+
+  --black: #08090a;
+  --ink: #111315;
+  --muted: #73787c;
+  --line: #dfe2e4;
+  --soft: #f5f6f6;
+  --white: #ffffff;
+
+  background: var(--white);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.sectionLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--line);
+
+  color: #697075;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.sectionHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 80px;
+  margin: 52px 0 70px;
+}
+
+.sectionHeading h2,
+.introGrid h2,
+.architectureIntro h2,
+.technologyIntro h2,
+.opportunityGrid h2,
+.intelligenceGrid h2,
+.connectionIntro h2 {
+  margin: 0;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+
+.sectionHeading h2 span,
+.introGrid h2 span,
+.architectureIntro h2 span,
+.technologyIntro h2 span,
+.opportunityGrid h2 span,
+.intelligenceGrid h2 span,
+.connectionIntro h2 span,
+.ctaSection h2 span {
+  color: #8f969a;
+}
+
+.sectionHeading > p,
+.connectionIntro > p,
+.architectureIntro > p {
+  align-self: end;
+  max-width: 480px;
+  margin: 0;
+  color: #60676b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.kicker {
+  margin: 0 0 23px;
+  color: #687177;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.hero {
+  min-height: 820px;
+  padding: 28px 5vw 70px;
+  background: var(--black);
+  color: white;
+}
+
+.heroTop {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+
+  color: rgba(255, 255, 255, 0.53);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.82fr);
+  gap: 7vw;
+  align-items: center;
+  min-height: 710px;
+}
+
+.heroCopy h1 {
+  margin: 0;
+  font-size: clamp(57px, 8.3vw, 132px);
+  line-height: 0.85;
+  letter-spacing: -0.075em;
+  font-weight: 500;
+}
+
+.heroCopy h1 span {
+  color: var(--blue);
+}
+
+.heroLead {
+  max-width: 640px;
+  margin: 43px 0 0;
+  color: rgba(255, 255, 255, 0.67);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.heroMeta {
+  display: flex;
+  gap: 54px;
+  margin-top: 57px;
+}
+
+.heroMeta div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heroMeta span {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.heroMeta strong {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 540px;
+  border: 1px solid rgba(135, 206, 235, 0.26);
+  background: rgba(135, 206, 235, 0.025);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.visualHeader,
+.visualFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.visualFooter {
+  justify-content: flex-start;
+  gap: 13px;
+  border-top: 1px solid rgba(135, 206, 235, 0.13);
+}
+
+.visualFooter i {
+  width: 18px;
+  height: 1px;
+  background: rgba(135, 206, 235, 0.35);
+}
+
+.coreSystem {
+  position: relative;
+  width: min(31vw, 390px);
+  aspect-ratio: 1;
+  margin: auto;
+}
+
+.coreRing {
+  position: absolute;
+  inset: 10%;
+  border: 1px solid rgba(135, 206, 235, 0.28);
+  border-radius: 50%;
+}
+
+.ringTwo {
+  inset: 22%;
+  border-color: rgba(135, 206, 235, 0.4);
+}
+
+.ringThree {
+  inset: 35%;
+  border-color: rgba(135, 206, 235, 0.75);
+  box-shadow: 0 0 40px rgba(135, 206, 235, 0.08);
+}
+
+.coreCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 116px;
+  height: 116px;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  background: rgba(135, 206, 235, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.coreCenter span {
+  color: var(--blue);
+  font-size: 39px;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+
+.coreCenter small {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 7px;
+  letter-spacing: 0.15em;
+}
+
+.node {
+  position: absolute;
+  color: var(--blue);
+  font-size: 7px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+.nodeOne {
+  top: 4%;
+  left: 42%;
+}
+
+.nodeTwo {
+  top: 46%;
+  right: -3%;
+}
+
+.nodeThree {
+  bottom: 8%;
+  left: 37%;
+}
+
+.nodeFour {
+  top: 46%;
+  left: -4%;
+}
+
+/* ======================================================
+   GENERAL SECTIONS
+====================================================== */
+
+.introSection,
+.journeySection,
+.layersSection,
+.architectureSection,
+.technologySection,
+.opportunitySection,
+.changeSection,
+.intelligenceSection,
+.statusSection,
+.connectionSection {
+  padding: 110px 5vw;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 10vw;
+  margin-top: 65px;
+}
+
+.introBody {
+  max-width: 560px;
+}
+
+.introBody p {
+  margin: 0 0 24px;
+  color: #60666a;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.introBody .largeText {
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+/* ======================================================
+   JOURNEY
+====================================================== */
+
+.journeySection {
+  background: var(--blue-light);
+}
+
+.journeyList {
+  border-top: 1px solid rgba(35, 109, 131, 0.2);
+}
+
+.journeyLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(350px, 0.9fr);
+  gap: 40px;
+}
+
+.journeyItem {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 30px;
+  gap: 18px;
+  align-items: start;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid rgba(35, 109, 131, 0.17);
+  background: transparent;
+  padding: 24px 0;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.journeyItem > span {
+  padding-top: 3px;
+  color: var(--blue-dark);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.journeyItem strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.journeyItem p {
+  max-width: 600px;
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #53666d;
+  font-size: 12px;
+  line-height: 1.75;
+  opacity: 0;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.35s ease,
+    margin 0.35s ease;
+}
+
+.journeyItem b {
+  color: #78919a;
+  font-size: 15px;
+  font-weight: 400;
+  transition: transform 0.3s ease;
+}
+
+.journeyItemActive p {
+  max-height: 120px;
+  margin-top: 10px;
+  opacity: 1;
+}
+
+.journeyItemActive b {
+  transform: translate(3px, -3px);
+  color: var(--blue-dark);
+}
+
+.journeyPreview {
+  min-height: 560px;
+  background: var(--black);
+  color: white;
+  border: 1px solid rgba(135, 206, 235, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.previewTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(135, 206, 235, 0.14);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+
+.previewDiagram {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.previewCircle {
+  width: 180px;
+  height: 180px;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.previewCircle::before,
+.previewCircle::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(135, 206, 235, 0.18);
+  border-radius: 50%;
+}
+
+.previewCircle::before {
+  inset: -35px;
+}
+
+.previewCircle::after {
+  inset: -70px;
+}
+
+.previewCircle span {
+  color: var(--blue);
+  font-size: 54px;
+  font-weight: 400;
+}
+
+.previewLines {
+  display: flex;
+  gap: 7px;
+  margin-top: 60px;
+}
+
+.previewLines i {
+  width: 34px;
+  height: 1px;
+  background: var(--blue);
+  opacity: 0.45;
+}
+
+.previewLabel {
+  position: absolute;
+  bottom: 34px;
+  left: 34px;
+  right: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.previewLabel span {
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.previewLabel small {
+  max-width: 400px;
+  color: rgba(255, 255, 255, 0.43);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+/* ======================================================
+   SYSTEM LAYERS
+====================================================== */
+
+.layersGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.layerCard {
+  position: relative;
+  min-height: 380px;
+  padding: 30px;
+  background: white;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.layerCard:hover,
+.layerCardActive {
+  background: var(--blue-light);
+}
+
+.layerTop {
+  display: flex;
+  justify-content: space-between;
+  color: var(--blue-dark);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.layerCard h3 {
+  margin: 76px 0 18px;
+  font-size: 23px;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+}
+
+.layerCard > p {
+  max-width: 470px;
+  margin: 0;
+  color: #666c70;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.layerItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 28px;
+}
+
+.layerItems span {
+  padding: 8px 10px;
+  border: 1px solid #c8e4ed;
+  background: rgba(255, 255, 255, 0.5);
+  color: #536970;
+  font-size: 8px;
+}
+
+.layerArrow {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  color: var(--blue-dark);
+  transition: transform 0.3s ease;
+}
+
+.layerCardActive .layerArrow {
+  transform: translate(4px, -4px);
+}
+
+.layerCard:last-child {
+  grid-column: 1 / -1;
+  min-height: 330px;
+}
+
+/* ======================================================
+   ARCHITECTURE
+====================================================== */
+
+.architectureSection {
+  background: var(--black);
+  color: white;
+}
+
+.architectureSection .sectionLabel {
+  border-color: rgba(135, 206, 235, 0.16);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.architectureIntro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 10vw;
+  margin-top: 65px;
+}
+
+.architectureIntro > p {
+  color: rgba(255, 255, 255, 0.54);
+}
+
+.architectureDiagram {
+  position: relative;
+  min-height: 650px;
+  margin-top: 90px;
+}
+
+.architectureCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 190px;
+  height: 190px;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  background: rgba(135, 206, 235, 0.045);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 0 60px rgba(135, 206, 235, 0.05);
+}
+
+.architectureCenter span {
+  color: var(--blue);
+  font-size: 29px;
+  letter-spacing: -0.04em;
+}
+
+.architectureCenter small {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 7px;
+  letter-spacing: 0.15em;
+}
+
+.architectureLine,
+.architectureOrbit {
+  position: absolute;
+  border: 1px solid rgba(135, 206, 235, 0.18);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.architectureLine {
+  inset: 13%;
+}
+
+.architectureOrbit {
+  inset: 27%;
+  border-color: rgba(135, 206, 235, 0.08);
+}
+
+.archNode {
+  position: absolute;
+  width: 210px;
+  z-index: 3;
+}
+
+.archNode span {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--blue);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+.archNode strong {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.archNode p {
+  margin: 9px 0 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.archNode1 {
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.archNode2 {
+  top: 31%;
+  right: 1%;
+}
+
+.archNode3 {
+  bottom: 8%;
+  right: 16%;
+}
+
+.archNode4 {
+  bottom: 8%;
+  left: 16%;
+}
+
+.archNode5 {
+  top: 31%;
+  left: 1%;
+}
+
+/* ======================================================
+   TECHNOLOGY
+====================================================== */
+
+.technologySection {
+  background: var(--blue-light);
+}
+
+.technologyIntro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 10vw;
+  margin-top: 65px;
+}
+
+.technologyLead {
+  max-width: 560px;
+}
+
+.technologyLead > p {
+  margin: 0 0 22px;
+  color: #52656d;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.stackSignal {
+  margin-top: 35px;
+  padding-top: 19px;
+  border-top: 1px solid rgba(35, 109, 131, 0.22);
+}
+
+.stackSignal span {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--blue-dark);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.stackSignal strong {
+  display: block;
+  max-width: 470px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.technologyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 70px;
+  border: 1px solid #c8e4ed;
+  background: #c8e4ed;
+}
+
+.technologyCard {
+  position: relative;
+  min-height: 185px;
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  padding: 25px;
+  border: 0;
+  text-align: left;
+  background: white;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.technologyCard:hover,
+.technologyCardActive {
+  background: var(--blue);
+}
+
+.toolMark {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.dark {
+  background: #111315;
+  color: white;
+}
+
+.cyan {
+  background: #e4faff;
+  color: #087f9e;
+}
+
+.blue {
+  background: #e5efff;
+  color: #2563eb;
+}
+
+.postgres {
+  background: #e8f1fb;
+  color: #336791;
+}
+
+.green {
+  background: #e5f8ef;
+  color: #17966b;
+}
+
+.teal {
+  background: #e1f8f5;
+  color: #078b7b;
+}
+
+.github {
+  background: #151719;
+  color: white;
+}
+
+.docker {
+  background: #e5f4ff;
+  color: #1683c7;
+}
+
+.aws {
+  background: #fff0dc;
+  color: #e47b00;
+}
+
+.openai {
+  background: #e8ecec;
+  color: #111;
+}
+
+.mpesa {
+  background: #e2f7e9;
+  color: #15803d;
+}
+
+.stripe {
+  background: #eee8ff;
+  color: #635bff;
+}
+
+.technologyContent {
+  padding-right: 18px;
+}
+
+.technologyContent > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #8a9296;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.technologyCard:hover .technologyContent > span,
+.technologyCardActive .technologyContent > span {
+  color: rgba(17, 19, 21, 0.58);
+}
+
+.technologyContent strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.technologyContent p {
+  max-width: 250px;
+  margin: 9px 0 0;
+  color: #6a7377;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.technologyCard:hover .technologyContent p,
+.technologyCardActive .technologyContent p {
+  color: rgba(17, 19, 21, 0.68);
+}
+
+.technologyArrow {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  color: #8d979b;
+  transition: transform 0.3s ease;
+}
+
+.technologyCard:hover .technologyArrow,
+.technologyCardActive .technologyArrow {
+  transform: translate(3px, -3px);
+  color: var(--ink);
+}
+
+/* ======================================================
+   OPPORTUNITY
+====================================================== */
+
+.opportunitySection {
+  background: #f6f7f7;
+}
+
+.opportunityGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 10vw;
+  margin-top: 65px;
+}
+
+.opportunityBody {
+  max-width: 560px;
+}
+
+.opportunityBody p {
+  margin: 0 0 25px;
+  color: #656b6f;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.opportunityBody .largeText {
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+.signal {
+  margin-top: 42px;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.signal span {
+  display: block;
+  margin-bottom: 10px;
+  color: #858b8e;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+.signal strong {
+  display: block;
+  max-width: 460px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* ======================================================
+   CHANGE
+====================================================== */
+
+.changeList {
+  border-top: 1px solid var(--line);
+}
+
+.changeRow {
+  width: 100%;
+  display: grid;
+  grid-template-columns:
+    42px
+    minmax(130px, 0.8fr)
+    35px
+    minmax(160px, 1fr)
+    minmax(200px, 1.1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 25px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.changeRow:hover,
+.changeRowActive {
+  background: var(--blue-light);
+}
+
+.changeNumber {
+  color: #9ca1a4;
+  font-size: 9px;
+}
+
+.changeBefore small,
+.changeAfter small {
+  display: block;
+  margin-bottom: 7px;
+  color: #9ca1a4;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.changeBefore strong,
+.changeAfter strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.changeAfter strong {
+  color: var(--blue-dark);
+}
+
+.changeArrow {
+  color: #8e999d;
+  font-size: 18px;
+}
+
+.changeRow p {
+  margin: 0;
+  color: #6b7074;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+/* ======================================================
+   INTELLIGENCE
+====================================================== */
+
+.intelligenceSection {
+  background: var(--black);
+  color: white;
+}
+
+.intelligenceSection .sectionLabel {
+  color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(135, 206, 235, 0.15);
+}
+
+.intelligenceGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 10vw;
+  margin-top: 65px;
+}
+
+.intelligenceGrid h2 span {
+  color: var(--blue);
+}
+
+.intelligenceBody p {
+  max-width: 550px;
+  margin: 0 0 23px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.intelligenceFlow {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr 40px 1fr 40px 1fr;
+  align-items: center;
+  margin-top: 80px;
+  border-top: 1px solid rgba(135, 206, 235, 0.15);
+  border-bottom: 1px solid rgba(135, 206, 235, 0.15);
+}
+
+.intelligenceFlow > div {
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.intelligenceFlow span {
+  margin-bottom: 14px;
+  color: var(--blue);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+.intelligenceFlow strong {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.intelligenceFlow small {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.intelligenceFlow i {
+  color: var(--blue);
+  opacity: 0.6;
+  font-style: normal;
+  text-align: center;
+}
+
+/* ======================================================
+   STATUS
+====================================================== */
+
+.statusSection {
+  padding-top: 35px;
+}
+
+.statusBox {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 10vw;
+  padding: 70px 6vw;
+  background: var(--blue);
+  color: var(--black);
+}
+
+.statusBox h2 {
+  margin: 28px 0 0;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+.statusBox h2 span {
+  color: rgba(8, 9, 10, 0.42);
+}
+
+.statusCopy {
+  align-self: end;
+}
+
+.statusCopy p {
+  max-width: 520px;
+  margin: 0 0 22px;
+  color: rgba(8, 9, 10, 0.68);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 9px 12px;
+  border: 1px solid rgba(8, 9, 10, 0.22);
+  color: rgba(8, 9, 10, 0.7);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.statusBadge i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--black);
+}
+
+/* ======================================================
+   PORTFOLIO CONNECTION
+====================================================== */
+
+.connectionSection {
+  padding-bottom: 85px;
+}
+
+.connectionIntro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 10vw;
+  margin: 65px 0 70px;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.projectLink {
+  position: relative;
+  min-height: 390px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 27px;
+  color: white;
+  text-decoration: none;
+  background: var(--black);
+}
+
+.projectImage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.24;
+  transition:
+    opacity 0.45s ease,
+    transform 0.55s ease;
+}
+
+.projectImage img {
+  object-fit: cover;
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projectImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 9, 10, 0.45);
+  transition: background 0.4s ease;
+}
+
+.projectLink:hover .projectImage {
+  opacity: 0.82;
+  transform: scale(1.02);
+}
+
+.projectLink:hover .projectImage img {
+  transform: scale(1.045);
+}
+
+.projectLink:hover .projectImageOverlay {
+  background: rgba(8, 9, 10, 0.2);
+}
+
+.projectTop,
+.projectContent {
+  position: relative;
+  z-index: 2;
+}
+
+.projectTop {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.projectContent {
+  max-width: 470px;
+}
+
+.projectContent > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+.projectContent h3 {
+  margin: 0;
+  font-size: 31px;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+
+.projectContent p {
+  max-width: 410px;
+  margin: 13px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.projectFallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(135, 206, 235, 0.18),
+      transparent 55%
+    ),
+    var(--black);
+  color: var(--blue);
+}
+
+.projectFallback span {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.projectFallback strong {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.projectFallback small {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 7px;
+  letter-spacing: 0.15em;
+}
+
+.finalStatement {
+  margin-top: 110px;
+}
+
+.finalLine {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+}
+
+.finalStatement > p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin: 22px 0 70px;
+  color: #858b8e;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.finalStatement > p span {
+  color: var(--blue-dark);
+}
+
+.finalStatement h2 {
+  max-width: 1000px;
+  margin: 0;
+  font-size: clamp(48px, 8vw, 118px);
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  font-weight: 500;
+}
+
+.finalStatement h2 span {
+  color: var(--blue);
+}
+
+/* ======================================================
+   CTA
+====================================================== */
+
+.ctaSection {
+  padding: 32px 5vw 90px;
+  background: var(--black);
+  color: white;
+}
+
+.ctaTop {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(135, 206, 235, 0.15);
+
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.ctaSection h2 {
+  margin: 110px 0 35px;
+  font-size: clamp(55px, 9vw, 135px);
+  line-height: 0.85;
+  letter-spacing: -0.075em;
+  font-weight: 500;
+}
+
+.ctaSection h2 span {
+  color: var(--blue);
+}
+
+.ctaSection > p {
+  max-width: 650px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.54);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 42px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 15px 18px;
+  text-decoration: none;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: 0.25s ease;
+}
+
+.primaryButton {
+  background: var(--blue);
+  color: var(--black);
+}
+
+.primaryButton:hover {
+  background: white;
+}
+
+.secondaryButton {
+  border: 1px solid rgba(135, 206, 235, 0.28);
+  color: white;
+}
+
+.secondaryButton:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 1000px) {
+  .heroGrid,
+  .introGrid,
+  .journeyLayout,
+  .architectureIntro,
+  .technologyIntro,
+  .opportunityGrid,
+  .intelligenceGrid,
+  .connectionIntro {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .heroGrid {
+    padding-top: 70px;
+    min-height: auto;
+  }
+
+  .heroVisual {
+    min-height: 500px;
+  }
+
+  .coreSystem {
+    width: min(52vw, 380px);
+  }
+
+  .sectionHeading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .layersGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .layerCard:last-child {
+    grid-column: auto;
+  }
+
+  .technologyGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .changeRow {
+    grid-template-columns: 38px 1fr 30px 1fr;
+  }
+
+  .changeRow p {
+    grid-column: 2 / -1;
+  }
+
+  .intelligenceFlow {
+    grid-template-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
+  }
+
+  .statusBox {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 700px) {
+  .hero,
+  .introSection,
+  .journeySection,
+  .layersSection,
+  .architectureSection,
+  .technologySection,
+  .opportunitySection,
+  .changeSection,
+  .intelligenceSection,
+  .connectionSection {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero {
+    padding-top: 20px;
+    padding-bottom: 45px;
+  }
+
+  .heroTop,
+  .ctaTop {
+    font-size: 7px;
+  }
+
+  .heroGrid {
+    padding-top: 55px;
+  }
+
+  .heroCopy h1 {
+    font-size: clamp(52px, 15vw, 82px);
+  }
+
+  .heroLead {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+
+  .heroMeta {
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 38px;
+  }
+
+  .heroMeta strong {
+    font-size: 9px;
+  }
+
+  .heroVisual {
+    min-height: 410px;
+  }
+
+  .coreSystem {
+    width: 270px;
+  }
+
+  .coreCenter {
+    width: 90px;
+    height: 90px;
+  }
+
+  .coreCenter span {
+    font-size: 30px;
+  }
+
+  .node {
+    font-size: 6px;
+  }
+
+  .visualFooter {
+    flex-wrap: wrap;
+    gap: 7px;
+    font-size: 7px;
+  }
+
+  .visualFooter i {
+    width: 10px;
+  }
+
+  .introSection,
+  .journeySection,
+  .layersSection,
+  .architectureSection,
+  .technologySection,
+  .opportunitySection,
+  .changeSection,
+  .intelligenceSection,
+  .connectionSection {
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+
+  .sectionHeading,
+  .introGrid,
+  .architectureIntro,
+  .technologyIntro,
+  .opportunityGrid,
+  .intelligenceGrid,
+  .connectionIntro {
+    margin-top: 42px;
+  }
+
+  .sectionHeading {
+    margin-bottom: 45px;
+  }
+
+  .sectionHeading h2,
+  .introGrid h2,
+  .architectureIntro h2,
+  .technologyIntro h2,
+  .opportunityGrid h2,
+  .intelligenceGrid h2,
+  .connectionIntro h2 {
+    font-size: clamp(38px, 11vw, 58px);
+  }
+
+  .sectionHeading > p,
+  .connectionIntro > p,
+  .architectureIntro > p {
+    font-size: 12px;
+  }
+
+  .introBody .largeText,
+  .opportunityBody .largeText {
+    font-size: 19px;
+  }
+
+  .journeyItem {
+    grid-template-columns: 32px minmax(0, 1fr) 20px;
+    gap: 11px;
+    padding: 20px 0;
+  }
+
+  .journeyItem strong {
+    font-size: 14px;
+  }
+
+  .journeyItem p {
+    font-size: 11px;
+  }
+
+  .journeyPreview {
+    min-height: 420px;
+  }
+
+  .previewCircle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .previewCircle span {
+    font-size: 42px;
+  }
+
+  .previewLabel {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+
+  .layerCard {
+    min-height: 340px;
+    padding: 23px;
+  }
+
+  .layerCard h3 {
+    margin-top: 58px;
+    font-size: 21px;
+  }
+
+  .layerItems span {
+    font-size: 7px;
+  }
+
+  .architectureDiagram {
+    min-height: 650px;
+    margin-top: 50px;
+  }
+
+  .architectureCenter {
+    width: 140px;
+    height: 140px;
+  }
+
+  .architectureCenter span {
+    font-size: 23px;
+  }
+
+  .architectureLine {
+    inset: 16%;
+  }
+
+  .architectureOrbit {
+    inset: 31%;
+  }
+
+  .archNode {
+    width: 130px;
+  }
+
+  .archNode strong {
+    font-size: 9px;
+  }
+
+  .archNode p {
+    font-size: 8px;
+  }
+
+  .archNode1 {
+    top: 0;
+  }
+
+  .archNode2 {
+    right: 0;
+    top: 30%;
+  }
+
+  .archNode3 {
+    right: 5%;
+    bottom: 4%;
+  }
+
+  .archNode4 {
+    left: 5%;
+    bottom: 4%;
+  }
+
+  .archNode5 {
+    left: 0;
+    top: 30%;
+  }
+
+  .technologyGrid {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+
+  .technologyCard {
+    min-height: 155px;
+  }
+
+  .changeRow {
+    grid-template-columns: 30px 1fr 20px;
+    gap: 12px;
+    padding: 22px 0;
+  }
+
+  .changeBefore,
+  .changeAfter {
+    grid-column: 2;
+  }
+
+  .changeArrow {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .changeAfter {
+    grid-row: 2;
+  }
+
+  .changeRow p {
+    grid-column: 2 / -1;
+  }
+
+  .intelligenceFlow {
+    display: block;
+    margin-top: 55px;
+  }
+
+  .intelligenceFlow > div {
+    min-height: 0;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(135, 206, 235, 0.12);
+  }
+
+  .intelligenceFlow i {
+    display: none;
+  }
+
+  .statusSection {
+    padding: 0 22px;
+  }
+
+  .statusBox {
+    padding: 48px 25px;
+  }
+
+  .statusBox h2 {
+    font-size: clamp(43px, 12vw, 65px);
+  }
+
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectLink {
+    min-height: 330px;
+  }
+
+  .finalStatement {
+    margin-top: 75px;
+  }
+
+  .finalStatement > p {
+    margin-bottom: 50px;
+    line-height: 1.8;
+  }
+
+  .finalStatement h2 {
+    font-size: clamp(50px, 14vw, 80px);
+  }
+
+  .ctaSection {
+    padding: 25px 22px 65px;
+  }
+
+  .ctaSection h2 {
+    margin-top: 75px;
+    font-size: clamp(55px, 16vw, 90px);
+  }
+
+  .ctaActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

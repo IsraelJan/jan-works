@@ -5,11 +5,12 @@ import { useState } from "react";
 import styles from "./Navbar.module.css";
 
 const navigation = [
+  { label: "Home", href: "/" },
   { label: "Work", href: "/work" },
   { label: "Systems", href: "/systems" },
-  { label: "Engineering", href: "/engineering" },
-  { label: "About", href: "/about" },
   { label: "Experience", href: "/experience" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {

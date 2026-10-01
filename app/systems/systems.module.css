@@ -1,0 +1,1137 @@
+.page {
+  --blue: #87ceeb;
+  --blue-light: #eaf8fd;
+  --blue-soft: #d8f1fa;
+  --blue-dark: #236d83;
+
+  --black: #08090a;
+  --ink: #111315;
+  --muted: #73787c;
+  --line: #dfe2e4;
+  --soft: #f5f6f6;
+  --white: #ffffff;
+
+  min-height: 100vh;
+  background: var(--white);
+  color: var(--ink);
+}
+
+/* -------------------------------------------------------
+   SHARED
+------------------------------------------------------- */
+
+.sectionNumber {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.sectionHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 70px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+}
+
+.sectionHeader p {
+  max-width: 440px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* -------------------------------------------------------
+   HERO
+------------------------------------------------------- */
+
+.hero {
+  min-height: 780px;
+  padding: 110px 6vw 80px;
+  background: var(--black);
+  color: var(--white);
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  gap: 8vw;
+  max-width: 1500px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.heroCopy {
+  padding-top: 30px;
+}
+
+.eyebrow {
+  margin: 0 0 40px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(76px, 11vw, 165px);
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  font-weight: 500;
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+.heroLead {
+  max-width: 600px;
+  margin: 55px 0 0;
+  color: #bfc4c7;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.5;
+}
+
+.heroMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 38px;
+}
+
+.heroMeta span {
+  padding: 9px 12px;
+  border: 1px solid #33383b;
+  color: #d8dcde;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+.heroArchitecture {
+  min-height: 560px;
+  padding: 28px;
+  border: 1px solid #2a2e30;
+  background: #0d0f10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heroArchitectureLabel,
+.heroArchitectureFooter {
+  display: flex;
+  justify-content: space-between;
+  color: #73797d;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+.heroArchitectureFooter {
+  color: var(--blue);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.heroDiagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diagramNode {
+  width: min(250px, 80%);
+  padding: 20px 18px;
+  border: 1px solid #3a4144;
+  background: #111416;
+  color: #e9edef;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.diagramNode:nth-child(9) {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.diagramLine {
+  width: 1px;
+  height: 35px;
+  background: #495054;
+}
+
+/* -------------------------------------------------------
+   INTRO
+------------------------------------------------------- */
+
+.introSection {
+  padding: 140px 8vw;
+  background: var(--white);
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+  gap: 9vw;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.introGrid h2,
+.domainsIntro h2,
+.experienceHeader h2,
+.skillsHeader h2 {
+  margin: 0;
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+
+.introGrid h2 span,
+.domainsIntro h2 span,
+.experienceHeader h2 span,
+.skillsHeader h2 span {
+  color: var(--muted);
+}
+
+.introText {
+  padding-top: 10px;
+}
+
+.largeText {
+  margin: 0 0 26px;
+  font-size: 30px !important;
+  line-height: 1.2 !important;
+  color: var(--ink) !important;
+}
+
+.introText p {
+  max-width: 570px;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* -------------------------------------------------------
+   SYSTEM FLOW
+------------------------------------------------------- */
+
+.flowSection {
+  padding: 140px 8vw;
+  background: var(--blue-light);
+}
+
+.flowLayout {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.85fr) minmax(360px, 1.15fr);
+  gap: 70px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.stageList {
+  border-top: 1px solid #c6e4ee;
+}
+
+.stageButton {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40px 1fr 30px;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 4px;
+  border: 0;
+  border-bottom: 1px solid #c6e4ee;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: padding 220ms ease, background 220ms ease;
+}
+
+.stageButton > span:first-child {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.stageButtonMain {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stageButtonMain strong {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.stageButtonMain small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.stageArrow {
+  color: var(--muted);
+  text-align: right;
+}
+
+.stageButton:hover,
+.stageActive {
+  padding-left: 15px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.stageActive .stageButtonMain strong,
+.stageActive .stageArrow {
+  color: var(--blue-dark);
+}
+
+.stageDetail {
+  min-height: 430px;
+  padding: 44px;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.stageDetailTop {
+  display: flex;
+  justify-content: space-between;
+  color: var(--blue);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+.stageDetail h3 {
+  margin: 75px 0 24px;
+  font-size: clamp(45px, 6vw, 82px);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+
+.stageDetail p {
+  max-width: 620px;
+  margin: 0;
+  color: #adb3b7;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.outputList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.outputList span {
+  padding: 9px 11px;
+  border: 1px solid #303639;
+  color: #d5dadc;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+.stageFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+  padding-top: 17px;
+  border-top: 1px solid #2c3235;
+  color: #72797d;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+/* -------------------------------------------------------
+   CAPABILITIES
+------------------------------------------------------- */
+
+.capabilitiesSection {
+  padding: 140px 8vw;
+  background: var(--white);
+}
+
+.capabilityLayout {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  gap: 80px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.capabilityList {
+  border-top: 1px solid var(--line);
+}
+
+.capabilityButton {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 42px 1fr 25px;
+  gap: 15px;
+  align-items: center;
+  padding: 25px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  text-align: left;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.capabilityButton > span:first-child {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.capabilityButton strong {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.capabilityButton > span:last-child {
+  color: var(--muted);
+  text-align: right;
+}
+
+.capabilityActive {
+  padding-left: 14px;
+  background: var(--blue-light);
+}
+
+.capabilityActive strong,
+.capabilityActive > span:last-child {
+  color: var(--blue-dark);
+}
+
+.capabilityDetail {
+  min-height: 430px;
+  padding: 48px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+}
+
+.detailNumber {
+  display: block;
+  color: var(--blue-dark);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.capabilityDetail h3 {
+  margin: 80px 0 22px;
+  font-size: clamp(34px, 4vw, 60px);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+.capabilityDetail p {
+  max-width: 560px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.skillGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 38px;
+}
+
+.skillGrid span {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 9px;
+  letter-spacing: 0.07em;
+}
+
+/* -------------------------------------------------------
+   DOMAINS
+------------------------------------------------------- */
+
+.domainsSection {
+  padding: 140px 8vw;
+  background: var(--black);
+  color: var(--white);
+}
+
+.domainsSection .sectionNumber {
+  color: #777e82;
+}
+
+.domainsIntro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.75fr);
+  gap: 10vw;
+  max-width: 1300px;
+  margin: 0 auto 90px;
+}
+
+.domainsIntro h2 span {
+  color: var(--blue);
+}
+
+.domainsIntro p {
+  align-self: end;
+  max-width: 480px;
+  margin: 0;
+  color: #9ca3a7;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.domainGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1300px;
+  margin: 0 auto;
+  border-top: 1px solid #292e31;
+  border-left: 1px solid #292e31;
+}
+
+.domainCard {
+  min-height: 250px;
+  padding: 30px;
+  border-right: 1px solid #292e31;
+  border-bottom: 1px solid #292e31;
+}
+
+.domainCard > span {
+  color: var(--blue);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+.domainCard h3 {
+  margin: 70px 0 15px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.domainCard p {
+  margin: 0;
+  color: #8e969a;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* -------------------------------------------------------
+   EXPERIENCE
+------------------------------------------------------- */
+
+.experienceSection {
+  padding: 140px 8vw;
+  background: var(--white);
+}
+
+.experienceHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr);
+  gap: 10vw;
+  max-width: 1300px;
+  margin: 0 auto 90px;
+}
+
+.experienceHeader p {
+  align-self: end;
+  max-width: 480px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.experienceFlow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  max-width: 1400px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.experienceStep {
+  min-height: 240px;
+  padding: 24px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.experienceStep > span {
+  color: var(--blue-dark);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+.experienceStep strong {
+  display: block;
+  margin-top: 80px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.experienceStep p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* -------------------------------------------------------
+   SKILLS
+------------------------------------------------------- */
+
+.skillsSection {
+  padding: 140px 8vw;
+  background: var(--blue-light);
+}
+
+.skillsHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr);
+  gap: 10vw;
+  max-width: 1300px;
+  margin: 0 auto 90px;
+}
+
+.skillsHeader p {
+  align-self: end;
+  max-width: 480px;
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.skillsMatrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1300px;
+  margin: 0 auto;
+  border-top: 1px solid #c4e2ec;
+  border-left: 1px solid #c4e2ec;
+}
+
+.skillColumn {
+  min-height: 320px;
+  padding: 28px;
+  border-right: 1px solid #c4e2ec;
+  border-bottom: 1px solid #c4e2ec;
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.skillColumnNumber {
+  color: var(--blue-dark);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+.skillColumn h3 {
+  margin: 65px 0 25px;
+  font-size: 12px;
+  letter-spacing: 0.11em;
+}
+
+.skillColumn ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skillColumn li {
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(35, 109, 131, 0.12);
+  color: #4e6871;
+  font-size: 12px;
+}
+
+/* -------------------------------------------------------
+   TECHNOLOGY
+------------------------------------------------------- */
+
+.technologySection {
+  padding: 140px 8vw;
+  background: var(--white);
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1300px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.toolCard {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-height: 125px;
+  padding: 22px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.toolCard:hover {
+  background: var(--blue-light);
+  transform: translateY(-2px);
+}
+
+.toolVisual {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.toolVisual img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.toolVisual span {
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.toolCard > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.toolCard strong {
+  font-size: 12px;
+}
+
+.toolCard small {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+/* -------------------------------------------------------
+   PRINCIPLES
+------------------------------------------------------- */
+
+.principlesSection {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.75fr) minmax(0, 1.25fr);
+  gap: 10vw;
+  padding: 140px 8vw;
+  background: var(--soft);
+}
+
+.principlesSide h2 {
+  margin: 80px 0 30px;
+  font-size: clamp(50px, 6vw, 88px);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+
+.principlesSide h2 span {
+  color: var(--blue-dark);
+}
+
+.principlesSide > p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.principlesList {
+  border-top: 1px solid var(--line);
+}
+
+.principle {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 30px;
+  padding: 31px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.principle > span {
+  color: var(--blue-dark);
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+
+.principle h3 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.principle p {
+  max-width: 600px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* -------------------------------------------------------
+   STATEMENT
+------------------------------------------------------- */
+
+.statementSection {
+  padding: 150px 8vw;
+  background: var(--white);
+}
+
+.statementGrid {
+  display: grid;
+  grid-template-columns: 0.45fr 1.55fr;
+  gap: 9vw;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.statementMark {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  margin-top: 90px;
+  border: 1px solid var(--blue);
+  color: var(--blue-dark);
+  font-size: 25px;
+}
+
+.statementEyebrow {
+  margin: 0 0 28px;
+  color: var(--blue-dark);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.statementGrid h2 {
+  margin: 0;
+  font-size: clamp(52px, 7vw, 105px);
+  line-height: 0.91;
+  letter-spacing: -0.065em;
+  font-weight: 500;
+}
+
+.statementGrid h2 span {
+  color: var(--muted);
+}
+
+.statementBody {
+  max-width: 650px;
+  margin: 45px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* -------------------------------------------------------
+   CTA
+------------------------------------------------------- */
+
+.ctaSection {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 60px;
+  align-items: end;
+  padding: 120px 8vw;
+  background: var(--black);
+  color: var(--white);
+}
+
+.ctaSection .sectionNumber {
+  color: #71787b;
+}
+
+.ctaSection h2 {
+  margin: 60px 0 25px;
+  font-size: clamp(58px, 8vw, 120px);
+  line-height: 0.88;
+  letter-spacing: -0.065em;
+  font-weight: 500;
+}
+
+.ctaSection h2 span {
+  color: var(--blue);
+}
+
+.ctaSection p {
+  max-width: 600px;
+  margin: 0;
+  color: #9ca3a7;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  padding: 17px 20px;
+  border: 1px solid var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.ctaButton span {
+  color: var(--blue);
+  font-size: 17px;
+}
+
+.ctaButton:hover {
+  background: var(--blue);
+  color: var(--black);
+}
+
+.ctaButton:hover span {
+  color: var(--black);
+}
+
+/* -------------------------------------------------------
+   TABLET
+------------------------------------------------------- */
+
+@media (max-width: 1050px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .heroInner,
+  .introGrid,
+  .flowLayout,
+  .capabilityLayout,
+  .domainsIntro,
+  .experienceHeader,
+  .skillsHeader,
+  .statementGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroArchitecture {
+    min-height: 500px;
+  }
+
+  .experienceFlow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .toolsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .domainGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skillsMatrix {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .principlesSection {
+    grid-template-columns: 1fr;
+  }
+
+  .statementMark {
+    margin-top: 30px;
+  }
+}
+
+/* -------------------------------------------------------
+   MOBILE
+------------------------------------------------------- */
+
+@media (max-width: 700px) {
+  .hero,
+  .introSection,
+  .flowSection,
+  .capabilitiesSection,
+  .domainsSection,
+  .experienceSection,
+  .skillsSection,
+  .technologySection,
+  .principlesSection,
+  .statementSection {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .hero h1 {
+    font-size: clamp(62px, 18vw, 105px);
+  }
+
+  .heroLead {
+    margin-top: 38px;
+  }
+
+  .heroArchitecture {
+    min-height: 440px;
+    margin-top: 25px;
+    padding: 20px;
+  }
+
+  .diagramNode {
+    width: 90%;
+    padding: 17px 10px;
+  }
+
+  .introSection,
+  .flowSection,
+  .capabilitiesSection,
+  .domainsSection,
+  .experienceSection,
+  .skillsSection,
+  .technologySection,
+  .principlesSection,
+  .statementSection {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .sectionHeader {
+    gap: 35px;
+    margin-bottom: 50px;
+  }
+
+  .sectionHeader h2,
+  .introGrid h2,
+  .domainsIntro h2,
+  .experienceHeader h2,
+  .skillsHeader h2 {
+    font-size: clamp(43px, 13vw, 68px);
+  }
+
+  .flowLayout,
+  .capabilityLayout {
+    gap: 30px;
+  }
+
+  .stageDetail {
+    min-height: 390px;
+    padding: 28px;
+  }
+
+  .stageDetail h3 {
+    margin-top: 60px;
+    font-size: 55px;
+  }
+
+  .capabilityDetail {
+    min-height: 390px;
+    padding: 30px;
+  }
+
+  .capabilityDetail h3 {
+    margin-top: 60px;
+    font-size: 44px;
+  }
+
+  .domainGrid,
+  .skillsMatrix,
+  .toolsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .domainCard {
+    min-height: 210px;
+  }
+
+  .experienceFlow {
+    grid-template-columns: 1fr;
+  }
+
+  .experienceStep {
+    min-height: auto;
+  }
+
+  .experienceStep strong {
+    margin-top: 45px;
+  }
+
+  .skillColumn {
+    min-height: auto;
+  }
+
+  .skillColumn h3 {
+    margin-top: 45px;
+  }
+
+  .principlesSection {
+    gap: 50px;
+  }
+
+  .principlesSide h2 {
+    margin-top: 50px;
+    font-size: clamp(48px, 14vw, 72px);
+  }
+
+  .statementGrid {
+    gap: 45px;
+  }
+
+  .statementGrid h2 {
+    font-size: clamp(52px, 15vw, 78px);
+  }
+
+  .ctaSection {
+    grid-template-columns: 1fr;
+    padding: 90px 6vw;
+  }
+
+  .ctaSection h2 {
+    margin-top: 45px;
+    font-size: clamp(58px, 16vw, 88px);
+  }
+
+  .ctaButton {
+    width: fit-content;
+  }
+}
