@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JAN WORKS — Israel Jan Otieno
 
-## Getting Started
+### Systems Thinking · Software Engineering · Digital Operations
 
-First, run the development server:
+I build digital experiences and connected systems that solve practical problems.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+My work sits at the intersection of **software engineering, digital systems, workflow automation, and business operations**. With experience across CRM platforms, operational workflows, web development, and automation, I approach technology by looking beyond the interface to understand how the entire system works.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I believe good software should do more than look good. It should make processes clearer, connect information, improve experiences, and help people work more effectively.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Explore my portfolio:** [https://www.israel-jan.site/](https://www.israel-jan.site/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## What I Do
 
-To learn more about Next.js, take a look at the following resources:
+### Software & Web Development
+Building responsive web experiences and applications with a focus on usability, maintainability, and thoughtful interface design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- React
+- Next.js
+- TypeScript
+- JavaScript
+- HTML5 & CSS3
+- Responsive Web Design
+- Git & GitHub
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Digital Systems & Automation
+Connecting tools, information, and workflows to create more reliable digital operations.
 
-## Deploy on Vercel
+- CRM Systems
+- Workflow Automation
+- API & Platform Integrations
+- GoHighLevel
+- HoneyBook
+- Zapier, Make & n8n
+- Process Design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Business & Digital Operations
+Applying operational understanding to the design of practical technology solutions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Business Process Improvement
+- Lead Generation Systems
+- Client & Customer Journeys
+- Real Estate Operations
+- Digital Marketing Operations
+- Reporting & Workflow Management
+
+---
+
+## Selected Projects
+
+### JAN WORKS — Portfolio
+My professional portfolio, bringing together my work across software development, systems architecture, automation, and digital operations.
+
+**Focus:** Next.js · React · TypeScript · UI Development
+
+### ARCLINE — Personal Operating System
+A personal OS concept focused on bringing projects, goals, learning, finances, and personal and business activities into a more connected environment.
+
+**Focus:** Product Thinking · Application Development · Systems Design
+
+### ZARIQ — PropTech
+A real estate technology concept exploring how property discovery, property intelligence, transactions, and property operations could connect within one digital platform.
+
+**Focus:** PropTech · Product Architecture · Real Estate Systems
+
+### Digital Operations & Automation
+Practical work connecting CRM platforms, communication channels, lead capture, workflows, and reporting to support business operations.
+
+**Focus:** CRM · Automation · Integrations · Operational Systems
+
+---
+
+## How I Approach Problems
+
+My approach follows a simple principle:
+
+**UNDERSTAND → STRUCTURE → CONNECT → BUILD → IMPROVE**
+
+1. **Understand** the people, requirements, and problem.
+2. **Structure** the information, process, and solution.
+3. **Connect** the relevant tools, data, and workflows.
+4. **Build** a practical, user-focused digital experience.
+5. **Improve** through testing, feedback, and iteration.
+
+---
+
+## Current Focus
+
+I am continuing to develop my software engineering capabilities through practical projects and ongoing learning.
+
+Current areas of focus include:
+
+- Modern frontend development with React and Next.js
+- TypeScript and application architecture
+- Software engineering fundamentals
+- API integration and backend development
+- Product thinking and system design
+- Building useful, maintainable software
+
+---
+
+## Connect With Me
+
+- **Portfolio:** [https://www.israel-jan.site/](https://www.israel-jan.site/)
+- **LinkedIn:** [Israel Jan Otieno](https://www.linkedin.com/in/israel-jan-35a702308/)
+- **GitHub:** [IsraelJan](https://github.com/IsraelJan)
+- **Email:** [israeljan.78@gmail.com](mailto:israeljan.78@gmail.com)
+
+---
+
+> **I build systems that work beyond the screen.**
