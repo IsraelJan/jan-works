@@ -5,7 +5,7 @@ import Footer from "@/components/site/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "JAN WORKS — Operations · Systems · Technology",
+  title: "JAN WORKS | Operations · Systems · Technology",
   description:
     "Israel Jan builds CRM systems, workflow automation, websites, digital systems and software.",
 };
